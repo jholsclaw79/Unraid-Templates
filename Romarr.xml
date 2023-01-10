@@ -25,4 +25,13 @@
         Description="Romarr Configuration Folder"
         Display="always"
         Required="true"></Config>
+    <Config
+        Type="Path"
+        Name="Rom Folder"
+        Target="/Roms/"
+        Default=""
+        Mode="rw"
+        Description="Romarr Rom Location"
+        Display="always"
+        Required="true"></Config>
 </Container>
