@@ -10,12 +10,12 @@
     <Config
         Type="Port"
         Name="Web UI"
-        Target="9487"
-        Default="9487"
+        Target="80"
+        Default="9486"
         Mode="tcp"
         Description="Web UI Port"
         Display="always"
-        Required="true">9487</Config>
+        Required="true">9486</Config>
     <Config
         Type="Path"
         Name="LaunchBox Installation Folder"
