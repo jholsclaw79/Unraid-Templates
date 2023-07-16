@@ -1,37 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container version="2">
-    <Name>Romarr</Name>
-    <Overview>An application to handle rom management.  Please make sure you save the LaunchBox Platform DB and Metadata DB to the config folder</Overview>
-    <Registry>https://registry.hub.docker.com/u/jholsclaw79/romarr/</Registry>
-    <Repository>jholsclaw79/romarr</Repository>
+    <Name>Solder</Name>
+    <Overview>Technic Solder is an API that sits between a modpack repository and the launcher. It allows you to easily manage multiple modpacks in one single location. It's the same API we use to distribute our modpacks!</Overview>
+    <Registry>https://registry.hub.docker.com/u/jholsclaw79/solder/</Registry>
+    <Repository>jholsclaw79/solder</Repository>
     <Privileged>false</Privileged>
     <Network>bridge</Network>
-    <WebUI>http://[IP]:[PORT:9487]</WebUI>
+    <WebUI>http://[IP]:[PORT:880]</WebUI>
     <Config
         Type="Port"
-        Name="Web UI"
+        Name="Web UI - HTTP"
         Target="80"
-        Default="9486"
+        Default="880"
         Mode="tcp"
         Description="Web UI Port"
         Display="always"
-        Required="true">9486</Config>
+        Required="true">880</Config>
+    <Config
+        Type="Port"
+        Name="Web UI - HTTP"
+        Target="443"
+        Default="8443"
+        Mode="tcp"
+        Description="Web UI Port"
+        Display="always"
+        Required="true">8443</Config>
     <Config
         Type="Path"
         Name="Configuration Folder"
-        Target="/app/Config"
-        Default="/mnt/user/appdata/Romarr"
+        Target="/etc/nginx"
+        Default="/mnt/user/appdata/Solder/nginx-config"
         Mode="rw"
-        Description="Romarr Configuration Folder"
+        Description="Nginx Configuration Folder"
         Display="always"
         Required="true"></Config>
     <Config
         Type="Path"
-        Name="Rom Folder"
-        Target="/Roms/"
-        Default=""
+        Name="Web Folder"
+        Target="/var/www/html"
+        Default="/mnt/user/appdata/Solder/www"
         Mode="rw"
-        Description="Romarr Rom Location"
+        Description="Location for Nginx WWW Folder"
         Display="always"
         Required="true"></Config>
 </Container>
