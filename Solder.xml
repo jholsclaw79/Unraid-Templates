@@ -43,4 +43,69 @@
         Description="Location for Nginx WWW Folder"
         Display="always"
         Required="true"></Config>
+    <Config
+        Type="Variable"
+        Name="App URL"
+        Key="APP_URL"
+        Display="always"></Config>
+    <Config
+        Type="Variable"
+        Name="DB Connection Type"
+        Key="DB_CONNECTION"
+        Display="always"></Config>
+    <Config
+        Type="Variable"
+        Name="DB Host"
+        Key="DB_HOST"
+        Display="always"></Config>
+    <Config
+        Type="Variable"
+        Name="DB Port"
+        Key="DB_PORT"
+        Display="always"></Config>
+    <Config
+        Type="Variable"
+        Name="DB Database Name"
+        Key="DB_DATABASE"
+        Display="always"></Config>
+    <Config
+        Type="Variable"
+        Name="DB Username"
+        Key="DB_USERNAME"
+        Display="always"></Config>
+    <Config
+        Type="Variable"
+        Name="DB Password"
+        Key="DB_PASSWORD"
+        Display="always"></Config>
+    <Config
+        Type="Variable"
+        Name="Cache Driver"
+        Key="CACHE_DRIVER"
+        Display="always"></Config>
+    <Config
+        Type="Variable"
+        Name="Redis Host"
+        Key="REDIS_HOST"
+        Display="always"></Config>
+    <Config
+        Type="Variable"
+        Name="Redis Password"
+        Key="REDIS_PASSWORD"
+        Display="always"></Config>
+    <Config
+        Type="Variable"
+        Name="Redis Port"
+        Key="REDIS_PORT"
+        Display="always"></Config>
+    <Config
+        Type="Variable"
+        Name="Solder Repo Location"
+        Key="SOLDER_REPO_LOCATION"
+        Display="always"></Config>
+    <Config
+        Type="Variable"
+        Name="Solder Mirror Url"
+        Key="SOLDER_MIRROR_URL"
+        Display="always"></Config>
 </Container>
