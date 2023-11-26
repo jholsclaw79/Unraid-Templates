@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container version="2">
     <Name>Romarr</Name>
-    <Overview>An application to handle rom management.  Please make sure you save the LaunchBox Platform DB and Metadata DB to the config folder</Overview>
+    <Overview>An application to handle rom management.  </Overview>
     <Registry>https://registry.hub.docker.com/u/jholsclaw79/romarr/</Registry>
     <Repository>jholsclaw79/romarr</Repository>
     <Privileged>false</Privileged>
     <Network>bridge</Network>
-    <WebUI>http://[IP]:[PORT:9487]</WebUI>
+    <WebUI>http://[IP]:[PORT:9486]</WebUI>
     <Config
         Type="Port"
         Name="Web UI"
-        Target="80"
+        Target="8080"
         Default="9486"
         Mode="tcp"
         Description="Web UI Port"
@@ -32,6 +32,20 @@
         Default=""
         Mode="rw"
         Description="Romarr Rom Location"
+        Display="always"
+        Required="true"></Config>
+    <Config
+        Type="Variable"
+        Name="IGDB Client ID"
+        Target="IGDB_CLIENT_ID"
+        Default=""
+        Display="always"
+        Required="true"></Config>
+    <Config
+        Type="Variable"
+        Name="IGDB Client Secret Key"
+        Target="IGDB_CLIENT_SECRET"
+        Default=""
         Display="always"
         Required="true"></Config>
 </Container>
